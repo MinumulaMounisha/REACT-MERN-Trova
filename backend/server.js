@@ -18,8 +18,10 @@ mongoose.set('useUnifiedTopology', true); */
 
 // Connecting MongoDB Database
 mongoose.Promise = global.Promise;
-const dbstring = "mongodb+srv://Gab1:Gab123@react-mern.exlwu.mongodb.net/ReactretryWrites=true&w=majority"
-mongoose.connect(dbstring).then(() => {
+//const dbstring = "mongodb+srv://Gab1:Gab123@react-mern.exlwu.mongodb.net/ReactretryWrites=true&w=majority"
+
+//const dbstring = process.env.db
+mongoose.connect(dbConfig.db).then(() => {
   console.log('Database successfully connected!')
 },
   error => {
